@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+:root {
+    /* polices */
+    --polices-titres: 'Cormorant Garamond', serif;
+    --polices-textes: 'Montserrat', sans-serif;
+
+    /* couleurs */
+    --bleu-nuit: #1A2D34;
+    --Blanc: #FFFFFF;
+    --noire: #000000;
+    --Turquoise-foncé: #0A3A4A;
+    --Orange-terracotta: #D94F2B;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--polices-textes);
+    color: var(--noire);
+}
+
+/* Logo */
+.logo {
+    color: var(--bleu-nuit);
+    text-decoration: none;
+}
+.logo-style-inverse {
+    color: var(--Blanc);
+}
+.logo-principale {
+    display: block;
+    font-family: var(--polices-textes);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.logo-title {
+    display: block;
+    font-family: var(--polices-titres);
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 1px;
+    text-align: center;
+}
+
+/* Boutons */
+.btn-bouton {
+    font-family: var(--polices-textes);
+    color: var(--Blanc);
+    border: solid 2px var(--Blanc);
+    transition: all 0.4s ease;
+}
+.btn-bouton:hover {
+    background-color: var(--Blanc);
+    border: solid 2px var(--Blanc);
+    color: var(--Orange-terracotta);
+}
+.btn-principale {
+    text-decoration: none;
+    border: solid 5px var(--Orange-terracotta);
+    background-color: var(--Orange-terracotta);
+    color: var(--Blanc);
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+.btn-principale:hover {
+    border-color: var(--Turquoise-foncé);
+    background-color: var(--Turquoise-foncé);
+    color: var(--Blanc);
+    transform: scale(1.05);
+}
+
+/* Titres */
+.titre-principale, .titre-secondaire {
+    font-family: var(--polices-titres);
+    color: var(--Turquoise-foncé);
+    font-weight: 700;
+}
+.titre-principale {
+    font-size: 4rem;
+}
+.titre-secondaire {
+    font-size: 2.25rem;
+}
+.titre-tertiaire {
+    font-family: var(--polices-titres);
+    color: var(--bleu-nuit); 
+    font-weight: 500; 
+    font-size: 1.5rem;
+}
