@@ -24,11 +24,11 @@
 
 <body>
 
-    <header class="header-restaurant">
-        <nav class="navbar navbar-expand-lg sticky-top">
+    <header class="header-restaurant sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid px-3 px-lg-5">
 
-                <a class="logo logo-style-inverse" href="#">
+                <a class="logo logo-resto" href="#">
                     <span class="logo-principale">PARALLÈLLE 5</span>
                     <span class="logo-title">Tables &amp; Saveurs</span>
                 </a>
@@ -43,17 +43,25 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Accueil</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menu</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" href="menu.html">Menu</a>
+
+                            <ul class="dropdown-menu bg-dropdown">
+                                <li><a class="dropdown-item" href="menu.html#entrees">PÉTIT DÉJEUNER</a></li>
+                                <li><a class="dropdown-item" href="menu.html#resistances">DÉJEUNER &amp; DINER</a></li>
+                                <li><a class="dropdown-item" href="menu.html#boissons">COCKTAILS</a></li>
+                            </ul>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="contacts.html">Contacts</a>
+                            <a class="nav-link" aria-current="page" href="contacts.html">Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="notre-histoire.html">Notre Histoire</a>
+                            <a class="nav-link active" href="notre-histoire.html">Notre Histoire</a>
                         </li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-bouton" href="">Voyages</a>
+                            <a class="btn btn-header" href="">Voyages</a>
                         </li>
                     </ul>
                 </div>
@@ -62,49 +70,133 @@
         </nav>
     </header>
 
-    <main></main>
+    <main>
 
-    <footer class="footer-restaurant">
-        <div class="container">
-            <div class="row">
+        <!-- hero -->
+        <section class="hero mt-5 py-5">
+            <div class="container text-center">
+                <h1 class="titre-principale">Nous Trouver &amp; Nous Contacter</h1>
+            </div>
+        </section>
+        <!-- GRILLE DE CONTACTS -->
+        <section>
+            <div class="container py-5">
 
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <a class="logo logo-style-inverse mb-3 d-inline-block" href="index.html">
-                        <span class="logo-principale">PARALLÈLLE 5</span>
-                        <span class="logo-title">Tables &amp; Saveurs</span>
-                    </a>
-                    <p class="footer-text">
-                        Une expérience culinaire unique à Abidjan, où les saveurs d'Afrique rencontrent la finesse de
-                        l'Europe.
-                    </p>
-                    <div class="social-icons mt-4">
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <div class="row grille-conteneur">
+
+                    <!-- Adresse -->
+                    <div class="col-md-3 text-center grille-conteneur-item ">
+                        <i class="fas fa-map-marker-alt fa-2x mb-3"></i>
+                        <h3>Adresse</h3>
+                        <p>Boulevard de Gaulle, Plateau<br>Abidjan</p>
+                    </div>
+
+                    <!-- Téléphone -->
+                    <div class="col-md-3 text-center grille-conteneur-item">
+                        <i class="fas fa-phone fa-2x mb-3"></i>
+                        <h3>Téléphone</h3>
+                        <a href="tel:+2250778544813" class="contacts">+225 0778544813</a>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="col-md-3 text-center grille-conteneur-item">
+                        <i class="fas fa-envelope fa-2x mb-3"></i>
+                        <h3>E-mail</h3>
+                        <a href="mailto:bossechrist69@gmail.com" class="contacts">parallele5-restaurant@gmail.com</a>
+                    </div>
+
+                    <!-- Nous suivre -->
+                    <div class="col-md-3 text-center grille-conteneur-item">
+                        <i class="fas fa-thumbs-up fa-2x mb-3"></i>
+                        <h3>Nous suivre</h3>
+                        <a href="#" class="fs-4 me-2 contacts"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="fs-4 me-2 contacts"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="fs-4 contacts"><i class="fab fa-tiktok"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- formulaire -->
+        <section>
+            <div class="container py-5 text-center">
+                <h2 class="titre-secondaire mb-5">Laissez-nous un Message</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 text-center">
+                        <form action="#">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Votre Nom">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Votre Email">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Votre Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-principale-resto">Envoyer</button>
+                        </form>
                     </div>
                 </div>
+            </div>
+        </section>
+        <!-- ligne separateur -->
+        <section>
+            <hr class="separateur">
+        </section>
 
-                <!-- Formulaire de Contact -->
-                <div class="col-lg-6 offset-lg-1">
-                    <h3 class="footer-title">Nous Contacter</h3>
-                    <form action="#">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Votre Nom">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Votre Email">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="4" placeholder="Votre Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-principale">Envoyer</button>
-                    </form>
+    </main>
+
+    <footer class="footer-restaurant">
+        <div class="container text-center mb-5">
+            <div class="text-center mb-5">
+                <a class="logo logo-resto mb-2 d-inline-block" href="index.html">
+                    <span class="logo-principale">PARALLÈLLE 5</span>
+                    <span class="logo-title">Tables &amp; Saveurs</span>
+                </a>
+                <p class="footer-text">
+                    Une expérience culinaire unique à Abidjan, où les saveurs d'Afrique rencontrent la finesse de
+                    l'Europe.
+                </p>
+            </div>
+
+            <!-- contacts -->
+            <div class="row">
+
+                <!-- horaire -->
+                <div class=" col-lg-4 horaire text-center">
+
+                    <div>
+                        <h3 class="titre-tertiaire">Horaires</h3>
+                    </div>
+                    <div>
+                        <p class="jours-footer">Du lundi au dimanche</p>
+                        <p>Pétit-Déjeuner <span class="items-jours">06h00-10h00</span></p>
+                        <p>Déjeuner <span class="items-jours">12h00 - 15h00</span></p>
+                        <p>Dîner <span class="items-jours">19h00 - 23h30</span></p>
+                    </div>
+
+                </div>
+                <!--  localisation -->
+                <div class="col-lg-4 text-center">
+                    <p>Abidjan, Plateau<br>Rue du Commerce, Immeuble "Le Flamboyant"</p>
+                </div>
+                <!-- numéro et reseaux-sociaux -->
+                <div class="col-lg-4 contacts-footer mt-4 text-center">
+                    <!-- numéro -->
+                    <a href="tel:+2250778544813" class="contacts">+225 0778544813</a>
+                    <!-- reseaux-sociaux -->
+                    <div class="mt-2">
+                        <a href="#" aria-label="Facebook" class="contacts"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="contacts"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok" class="contacts"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
                 </div>
 
             </div>
 
             <!-- Ligne de séparation  -->
-            <hr class="footer-divider">
+            <hr class="separateur">
             <div class="text-center footer-copyright">
                 <p>&copy; 2025 Parallèle 5. Tous droits réservés.</p>
             </div>

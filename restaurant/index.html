@@ -11,8 +11,7 @@
         content="restaurant abidjan, restaurant le plateau, cuisine fusion, restaurant bord de lagune, manger à abidjan, restaurant gastronomique, déjeuner d'affaires abidjan">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Parallèle 5 | Restaurant Fusion & Gastronomique à Abidjan">
-    <meta property="og:description"
-        content="Découvrez notre cuisine fusion Europe-Afrique avec une vue unique sur la lagune du Plateau.">
+    <meta property="og:description" content="Découvrez notre cuisine fusion Europe-Afrique avec une vue unique sur la lagune du Plateau.">
     <meta property="og:type" content="restaurant">
     <meta property="og:url" content="https://parallele5.ci/">
     <meta property="og:image" content="https://parallele5.ci/images/restaurant-parallele5.jpg">
@@ -26,16 +25,15 @@
 <body>
 
     <header class="header-restaurant sticky-top">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid px-3 px-lg-5">
 
-                <a class="logo logo-style-inverse" href="#">
+                <a class="logo logo-resto" href="index.html">
                     <span class="logo-principale">PARALLÈLLE 5</span>
                     <span class="logo-title">Tables &amp; Saveurs</span>
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_nav"
-                    aria-controls="navbar_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_nav" aria-controls="navbar_nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -44,8 +42,15 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menu</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="menu.html">Menu</a>
+
+                            <ul class="dropdown-menu bg-dropdown">
+                                <li><a class="dropdown-item" href="menu.html#entrees">PÉTIT DÉJEUNER</a></li>
+                                <li><a class="dropdown-item" href="menu.html#resistances">DÉJEUNER &amp; DINER</a></li>
+                                <li><a class="dropdown-item" href="menu.html#boissons">COCKTAILS</a></li>
+                            </ul>
+
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacts.html">Contacts</a>
@@ -54,7 +59,7 @@
                             <a class="nav-link" href="notre-histoire.html">Notre Histoire</a>
                         </li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-bouton" href="">Voyages</a>
+                            <a class="btn btn-header" href="">Voyages</a>
                         </li>
                     </ul>
                 </div>
@@ -64,12 +69,14 @@
     </header>
 
     <main>
+
+        <!-- section hero -->
         <section class="section-hero-restaurant">
             <div class="container  position-relative z-index-2 text-center">
                 <h1 class="titre-principale">Une Table sur la Lagune</h1>
                 <p class="my-4">Restaurant gastronomique à Abidjan. Découvrez notre cuisine fusion entre saveurs
                     d'Afrique et finesse d'Europe.</p>
-                <a class=" btn btn-principale btn-principale-restaurant" href="menu.html">Réservez</a>
+                <a class=" btn btn-principale-resto" href="menu.html">Réservez une Table</a>
             </div>
         </section>
 
@@ -77,10 +84,83 @@
             <div class="container">
                 <div class="row align-items-center">
 
-                    <!-- Colonne de l'image -->
+                    <!-- Caroussel -->
                     <div class="col-lg-6">
-                        <img src="../restaurant/images/img_section2.jpg" class="img-fluid rounded-1 shadow"
-                            alt="Intérieur élégant du restaurant Parallèle 5 à Abidjan">
+                        <!-- 
+      Rôle : Conteneur principal du carrousel.
+      Pourquoi :
+      - id="carouselAmbiance": Un nom unique est essentiel pour que les boutons sachent quel carrousel contrôler.
+      - class="carousel slide": Active le composant carrousel de Bootstrap avec une animation de glissement.
+      - data-bs-ride="carousel": C'est l'attribut qui DÉCLENCHE LE DÉFILEMENT AUTOMATIQUE au chargement de la page.
+    -->
+                        <div id="carouselAmbiance" class="carousel slide " data-bs-interval="2000" data-bs-ride="carousel">
+
+                            <!-- 
+          Rôle : Conteneur pour toutes les diapositives.
+          Pourquoi : C'est la "pellicule" qui va défiler à l'intérieur du carrousel.
+        -->
+                            <div class="carousel-inner">
+
+                                <!-- 
+              Rôle : Première diapositive.
+              Pourquoi :
+              - class="carousel-item": Définit cet élément comme une diapositive.
+              - class="active": Indique que c'est la première diapositive à s'afficher. Il ne doit y en avoir qu'une seule au départ.
+            -->
+                                <div class="carousel-item active">
+                                    <!-- 
+                  Rôle : L'image de la diapositive.
+                  Pourquoi :
+                  - class="d-block w-100": Classes Bootstrap. "d-block" évite les espacements indésirables et "w-100" assure que l'image prend toute la largeur de son conteneur.
+                  - class="carousel-image-fixed-height": C'est NOTRE classe CSS personnalisée pour forcer la hauteur et éviter la déformation.
+                -->
+                                    <img src="../restaurant/images/img_1_section2_1.jpg"
+                                        class="d-block w-100 carousel-image-fixed-height"
+                                        alt="Ambiance élégante du restaurant">
+                                </div>
+
+                                <!-- 
+              Rôle : Deuxième diapositive.
+              Pourquoi : Structure identique à la première, sans la classe "active".
+            -->
+                                <div class="carousel-item">
+                                    <img src="../restaurant/images/img_1_section2_2.jpg"
+                                        class="d-block w-100 carousel-image-fixed-height" alt="Détail de la décoration">
+                                </div>
+
+                                <!-- 
+              Rôle : Troisième diapositive.
+              Pourquoi : Structure identique.
+            -->
+                                <div class="carousel-item">
+                                    <img src="../restaurant/images/img_1_section2_3.jpg"
+                                        class="d-block w-100 carousel-image-fixed-height" alt="Vue de la terrasse">
+                                </div>
+                            </div>
+
+                            <!-- 
+          Rôle : Bouton pour défiler vers la gauche (précédent).
+          Pourquoi :
+          - class="carousel-control-prev": Applique le style Bootstrap pour le bouton de gauche.
+          - data-bs-target="#carouselAmbiance": Relie ce bouton à notre carrousel via son ID.
+          - data-bs-slide="prev": Indique au JavaScript de Bootstrap de passer à la diapositive précédente.
+        -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmbiance"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+
+                            <!-- 
+          Rôle : Bouton pour défiler vers la droite (suivant).
+          Pourquoi : Mêmes principes que le bouton précédent, mais pour la diapositive suivante.
+        -->
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAmbiance"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Colonne du texte -->
@@ -100,129 +180,122 @@
                 </div>
             </div>
         </section>
-
-        <section class="py-5 bg-light">
+        
+        <!-- SECTION DES CARTES DE MENU -->
+        <section class="py-5">
             <div class="container">
 
                 <div class="text-center mb-5">
                     <h2 class="titre-secondaire">Quand Deux Continents S'invitent à Table</h2>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card shadow-sm border-0 h-100">
-                            <img src="../restaurant/images/dôme_gourmand.jpg" class="card-img-top"
-                                alt="Le Dôme Gourmand, salade signature avec chips et noix">
+                <div class="row justify-content-center">
+
+                    <!--  la première carte -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card shadow-sm h-100 border-0">
+                            
+                            <img src="../restaurant/images/img_1_section3_1.jpg" class="card-img-top image-carte-carree" alt="Le Dôme Gourmand">
+                            <!-- Le corps de la carte -->
                             <div class="card-body text-center">
-                                <h3 class="card-title titre-tertiaire">Le Dôme Gourmand</h3>
-                                <p class="card-text">L'alliance parfaite d'une salade fondante et du croquant des chips
-                                    et noix.</p>
+                                <h3 class="card-title">Le Dôme Gourmand</h3>
+                                <p class="card-text">alliance parfaite d'une salade fondante et du croquant des chips et noix.</p>
                             </div>
+
                         </div>
                     </div>
 
-                    <div class="col-lg-4 mb-4">
-                        <div class="card shadow-sm border-0 h-100">
-                            <img src="../restaurant/images/toscana.jpeg" class="card-img-top" alt="Salade Toscana">
+                    <!-- Deuxième carte -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card shadow-sm h-100 border-0">
+
+                            <img src="../restaurant/images/img_1_section3_2.jpeg" class="card-img-top image-carte-carree" alt="La Salade Toscana">
+                            <!-- Le corps de la carte -->
                             <div class="card-body text-center">
-                                <h3 class="card-title titre-tertiaire">La Salade Toscana</h3>
-                                <p class="card-text">Un concentré de saveurs italiennes. Laitue croquante, tomates,
-                                    pepperoncini, copeaux de parmesan et croûtons dorés pour une salade fraîche et
-                                    pleine de caractère.</p>
+                                <h3 class="card-title">La Salade Toscana</h3>
+                                <p class="card-text">concentré de saveurs italiennes avec ses ingrédients frais et croquants.</p>
                             </div>
+
                         </div>
                     </div>
 
-                    <div class="col-lg-4 mb-4">
-                        <div class="card shadow-sm border-0 h-100">
-                            <img src="../restaurant/images/grillade_mixte_a_l_ivoirienne.jpg" class="card-img-top"
-                                alt="Sphère au chocolat intense">
+                    <!-- Troisième carte -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card shadow-sm h-100 border-0">
+
+                            <img src="../restaurant/images/img_1_section3_3.jpg" class="card-img-top image-carte-carree" alt="Grillade Mixte à l'Ivoirienne">
+                            <!-- Le corps de la carte -->
                             <div class="card-body text-center">
-                                <h3 class="card-title titre-tertiaire">Grillade Mixte à l'Ivoirienne</h3>
-                                <p class="card-text">duo parfait : poulet et kefta délicatement braisés, servis avec
-                                    attieké et sa sauce.</p>
+                                <h3 class="card-title">Grillade Mixte</h3>
+                                <p class="card-text">Duo parfait de poulet et kefta délicatement braisés, servis avec attieké.</p>
                             </div>
+
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <section class="py-5">
-            <div class="container">
-
-                <div class="text-center mb-5">
-                    <h2 class="titre-secondaire">Rejoignez-nous au Bord de l'Eau</h2>
-                </div>
-
-                <div class="row text-center">
-                    <!-- Colonne Adresse -->
-                    <div class="col-md-4 mb-4">
-                        <h3 class="titre-tertiaire">Adresse</h3>
-                        <p>Abidjan, Plateau<br>Rue du Commerce, Immeuble "Le Flamboyant"</p>
-                    </div>
-
-                    <!-- Colonne Horaires -->
-                    <div class="col-md-4 mb-4">
-                        <h3 class="titre-tertiaire">Horaires d'ouverture</h3>
-                        <p>Mardi - Dimanche<br>07:00 - 23:00</p>
-                    </div>
-
-                    <!-- Colonne Contact -->
-                    <div class="col-md-4 mb-4">
-                        <h3 class="titre-tertiaire">Téléphone</h3>
-                        <p>+225 07 78 54 48 13</p>
-                    </div>
-                </div>
-
-                <div class="text-center mt-4">
-                    <a class="btn btn-principale" href="contacts.html">Réserver une Table</a>
-                </div>
+        <section>
+            <div class="text-center mt-4">
+                <a class="btn btn-principale-resto" href="menu.html">Voir le menu</a>
             </div>
+            <hr class="separateur">
         </section>
+
     </main>
 
     <footer class="footer-restaurant">
         <div class="container">
+            <div class="text-center mb-5">
+                <a class="logo logo-resto mb-2 d-inline-block" href="index.html">
+                    <span class="logo-principale">PARALLÈLLE 5</span>
+                    <span class="logo-title">Tables &amp; Saveurs</span>
+                </a>
+                <p class="footer-text">
+                    Une expérience culinaire unique à Abidjan, où les saveurs d'Afrique rencontrent la finesse de
+                    l'Europe.
+                </p>
+            </div>
+
+            <!-- contacts -->
             <div class="row">
 
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <a class="logo logo-style-inverse mb-3 d-inline-block" href="index.html">
-                        <span class="logo-principale">PARALLÈLLE 5</span>
-                        <span class="logo-title">Tables &amp; Saveurs</span>
-                    </a>
-                    <p class="footer-text">
-                        Une expérience culinaire unique à Abidjan, où les saveurs d'Afrique rencontrent la finesse de
-                        l'Europe.
-                    </p>
-                    <div class="social-icons mt-4">
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
-                </div>
+                <!-- horaire -->
+                <div class=" col-lg-4 horaire text-center">
 
-                <!-- Formulaire de Contact -->
-                <div class="col-lg-6 offset-lg-1">
-                    <h3 class="footer-title">Nous Contacter</h3>
-                    <form action="#">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Votre Nom">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Votre Email">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="4" placeholder="Votre Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-principale">Envoyer</button>
-                    </form>
+                    <div>
+                        <h3 class="titre-tertiaire">Horaires</h3>
+                    </div>
+                    <div>
+                        <p class="jours-footer">Du lundi au dimanche</p>
+                        <p>Pétit-Déjeuner <span class="items-jours">06h00-10h00</span></p>
+                        <p>Déjeuner <span class="items-jours">12h00 - 15h00</span></p>
+                        <p>Dîner <span class="items-jours">19h00 - 23h30</span></p>
+                    </div>
+
+                </div>
+                <!--  localisation -->
+                <div class="col-lg-4 text-center">
+                    <p>Abidjan, Plateau<br>Rue du Commerce, Immeuble "Le Flamboyant"</p>
+                </div>  
+                <!-- numéro et reseaux-sociaux -->
+                <div class="col-lg-4 contacts-footer mt-4 text-center">
+                    <!-- numéro -->
+                    <a href="tel:+2250778544813" class="contacts">+225 0778544813</a>
+                    <!-- reseaux-sociaux -->
+                    <div class="mt-2">
+                        <a href="#" aria-label="Facebook" class="contacts"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="contacts"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok" class="contacts"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
                 </div>
 
             </div>
 
             <!-- Ligne de séparation  -->
-            <hr class="footer-divider">
+            <hr class="separateur">
             <div class="text-center footer-copyright">
                 <p>&copy; 2025 Parallèle 5. Tous droits réservés.</p>
             </div>

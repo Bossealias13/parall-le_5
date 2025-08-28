@@ -3,14 +3,14 @@
 :root {
     /* polices */
     --polices-titres: 'Cormorant Garamond', serif;
-    --polices-textes: 'Montserrat', sans-serif;
+    --polices-textes-lien-bouton-logo: 'Montserrat', sans-serif;
 
     /* couleurs */
-    --bleu-nuit: #1A2D34;
-    --Blanc: #FFFFFF;
-    --noire: #000000;
-    --Turquoise-foncé: #0A3A4A;
-    --Orange-terracotta: #D94F2B;
+    --blanc-craie: #F5F5F5;
+    --noire-carbone: #1A1A1A;
+    --or-antique: #C1A279;
+    --gris: #888888;
+    --sable-chaud: #A18A75;
 
 }
 * {
@@ -19,17 +19,17 @@
     box-sizing: border-box;
 }
 body {
-    font-family: var(--polices-textes);
-    color: var(--noire);
+    font-family: var(--polices-textes-lien-bouton-logo);
 }
 
 /* Logo */
-.logo {
-    color: var(--bleu-nuit);
+.logo-voyages {
+    color: var(--noire-carbone);
     text-decoration: none;
 }
-.logo-style-inverse {
-    color: var(--Blanc);
+.logo-resto {
+    color: var(--blanc-craie);
+    text-decoration: none;
 }
 .logo-principale {
     display: block;
@@ -49,36 +49,50 @@ body {
 }
 
 /* Boutons */
-.btn-bouton {
-    font-family: var(--polices-textes);
-    color: var(--Blanc);
-    border: solid 2px var(--Blanc);
+.btn-header {
+    font-family: var(--polices-textes-lien-bouton-logo);
+    color: var(--blanc-craie);
+    border: solid 2px var(--blanc-craie);
     transition: all 0.4s ease;
 }
-.btn-bouton:hover {
-    background-color: var(--Blanc);
-    border: solid 2px var(--Blanc);
-    color: var(--Orange-terracotta);
+.btn-header:hover {
+    border: solid 2px var(--or-antique);
+    color: var(--or-antique);
 }
-.btn-principale {
+.btn-principale-resto {
     text-decoration: none;
-    border: solid 5px var(--Orange-terracotta);
-    background-color: var(--Orange-terracotta);
-    color: var(--Blanc);
+    border: solid 2px var(--or-antique);
+    background-color: var(--or-antique);
+    color: var(--noire-carbone);
     font-weight: 600;
     transition: all 0.4s ease;
 }
-.btn-principale:hover {
-    border-color: var(--Turquoise-foncé);
-    background-color: var(--Turquoise-foncé);
-    color: var(--Blanc);
+.btn-principale-resto:hover {
+    border-color: var(--or-antique);
+    background-color: var(--noire-carbone);
+    color: var(--or-antique);
+    transform: scale(1.05);
+}
+.btn-principale-voyages {
+    text-decoration: none;
+    border: solid 5px var(--or-antique);
+    background-color: var(--or-antique);
+    color: var(--blanc-craie);
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+.btn-principale-voyages:hover {
+    border-color: var(--or-antique);
+    background-color: var(--blanc-craie);
+    color: var(--or-antique);
     transform: scale(1.05);
 }
 
 /* Titres */
-.titre-principale, .titre-secondaire {
+.titre-principale, .titre-secondaire, .titre-tertiaire{
     font-family: var(--polices-titres);
-    color: var(--Turquoise-foncé);
+}
+.titre-principale, .titre-secondaire {
     font-weight: 700;
 }
 .titre-principale {
@@ -88,8 +102,6 @@ body {
     font-size: 2.25rem;
 }
 .titre-tertiaire {
-    font-family: var(--polices-titres);
-    color: var(--bleu-nuit); 
     font-weight: 500; 
     font-size: 1.5rem;
 }
