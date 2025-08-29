@@ -1,0 +1,99 @@
+body {
+    background-color: var(--blanc-craie);
+}
+p {
+    color: var(--gris);
+}
+h1, h2, h3 {
+    color: var(--noire-carbone); 
+}
+
+/* ==== Header ==== */
+.header-voyages {
+    background-color: var(--blanc-craie);
+}
+.header-voyages .navbar-nav .nav-link:hover,
+.header-voyages .navbar-nav .nav-link:active,
+.header-voyages .navbar-nav .nav-link[aria-current="page"] {
+    color: var(--or-antique);
+}
+[aria-current="page"] {
+    border-bottom: solid 2px var(--noire-carbone);
+    font-size: 1.1rem;
+}
+
+/* ==== main(s) ==== */
+/* Section Hero */
+.hero-voyages {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../images/bgv_1.jpg');
+    background-size: cover;
+    background-position: bottom center;
+}
+.hero-voyages h1 {
+    color: var(--blanc-craie);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* --- Ligne de Soulignement --- */
+.souligneur {
+    border-top: 1px solid var(--or-antique);
+    width: 80px;
+    margin: 1.5rem auto;
+}
+
+/* icones experience parallele5 */
+.promesse-icone {
+    display: inline-flex; /* Permet de centrer l'icône à l'intérieur */
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Taille du cercle */
+    height: 80px; /* Taille du cercle */
+    background-color: var(--or-antique); /* Fond avec notre couleur d'accent */
+    border-radius: 50%; /* Pour le rendre parfaitement rond */
+    color: var(--blanc-craie); /* Couleur de l'icône à l'intérieur */
+    font-size: 2rem; /* Taille de l'icône */
+}
+
+/*  cartes voyages */
+
+.img-voyages {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+/* --- logo de moyen de paiement --- */
+.payment-logo {
+    width: auto;
+    height: 40px;
+}
+
+
+/* ==  GRILLE DE CONTACTS  == */
+
+.contact-voyages-conteneur {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.contact-voyages-conteneur-item {
+    padding: 2.5rem 1rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* == STYLE POUR LE FORMULAIRE DE CONTACTs  == */
+
+.form-control {
+    background-color: var(--blanc-craie);
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease;
+}
+.form-control:focus {
+    border-color: var(--or-antique);
+    box-shadow: 0 0 0 0.25rem rgba(193, 162, 121, 0.25); /* Ombre douce assortie */
+}

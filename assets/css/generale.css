@@ -49,6 +49,7 @@ body {
 }
 
 /* Boutons */
+
 .btn-header {
     font-family: var(--polices-textes-lien-bouton-logo);
     color: var(--blanc-craie);
@@ -59,6 +60,17 @@ body {
     border: solid 2px var(--or-antique);
     color: var(--or-antique);
 }
+.btn-header-voyages {
+    font-family: var(--polices-textes-lien-bouton-logo);
+    color: var(--noire-carbone);
+    border: solid 2px var(--noire-carbone);
+    transition: all 0.4s ease;
+}
+.btn-header-voyages:hover {
+    border: solid 2px var(--or-antique);
+    color: var(--or-antique);
+}
+
 .btn-principale-resto {
     text-decoration: none;
     border: solid 2px var(--or-antique);
@@ -75,7 +87,7 @@ body {
 }
 .btn-principale-voyages {
     text-decoration: none;
-    border: solid 5px var(--or-antique);
+    border: solid 2px var(--or-antique);
     background-color: var(--or-antique);
     color: var(--blanc-craie);
     font-weight: 600;
@@ -89,7 +101,7 @@ body {
 }
 
 /* Titres */
-.titre-principale, .titre-secondaire, .titre-tertiaire{
+.titre-principale, .titre-secondaire {
     font-family: var(--polices-titres);
 }
 .titre-principale, .titre-secondaire {
@@ -101,7 +113,18 @@ body {
 .titre-secondaire {
     font-size: 2.25rem;
 }
-.titre-tertiaire {
-    font-weight: 500; 
-    font-size: 1.5rem;
+
+/* lien de contacts icones reseaux sociaux , numero et addresse mail */
+.contacts {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+    transition: all 0.4s ease;
+}
+.contacts-voyages {
+    color: var(--gris);
+} 
+.contacts:hover {
+    color: var(--or-antique);
 }

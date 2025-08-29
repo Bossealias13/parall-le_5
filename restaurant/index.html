@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallèle 5 | Restaurant Fusion & Gastronomique à Abidjan</title>
-    <meta name="description"
-        content="Découvrez Parallèle 5, restaurant gastronomique à Abidjan. Une cuisine fusion Europe-Afrique avec une vue unique sur la lagune du Plateau. Réservez votre table.">
-    <meta name="keywords"
-        content="restaurant abidjan, restaurant le plateau, cuisine fusion, restaurant bord de lagune, manger à abidjan, restaurant gastronomique, déjeuner d'affaires abidjan">
+    <meta name="description" content="Découvrez Parallèle 5, restaurant gastronomique à Abidjan. Une cuisine fusion Europe-Afrique avec une vue unique sur la lagune du Plateau. Réservez votre table.">
+    <meta name="keywords" content="restaurant abidjan, restaurant le plateau, cuisine fusion, restaurant bord de lagune, manger à abidjan, restaurant gastronomique, déjeuner d'affaires abidjan">
     <meta name="robots" content="index, follow">
+
     <meta property="og:title" content="Parallèle 5 | Restaurant Fusion & Gastronomique à Abidjan">
     <meta property="og:description" content="Découvrez notre cuisine fusion Europe-Afrique avec une vue unique sur la lagune du Plateau.">
     <meta property="og:type" content="restaurant">
     <meta property="og:url" content="https://parallele5.ci/">
     <meta property="og:image" content="https://parallele5.ci/images/restaurant-parallele5.jpg">
+
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/svg">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css_fontawesome/all.min.css">
@@ -59,7 +59,7 @@
                             <a class="nav-link" href="notre-histoire.html">Notre Histoire</a>
                         </li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-header" href="">Voyages</a>
+                            <a class="btn btn-header" href="../voyages/index.html">Voyages</a>
                         </li>
                     </ul>
                 </div>
@@ -71,90 +71,45 @@
     <main>
 
         <!-- section hero -->
-        <section class="section-hero-restaurant">
+        <section class="hero-restaurant">
             <div class="container  position-relative z-index-2 text-center">
                 <h1 class="titre-principale">Une Table sur la Lagune</h1>
-                <p class="my-4">Restaurant gastronomique à Abidjan. Découvrez notre cuisine fusion entre saveurs
-                    d'Afrique et finesse d'Europe.</p>
+                <p class="my-4">Restaurant gastronomique à Abidjan. Découvrez notre cuisine fusion entre saveurs d'Afrique et finesse d'Europe.</p>
                 <a class=" btn btn-principale-resto" href="menu.html">Réservez une Table</a>
             </div>
         </section>
-
+        <!-- caroussel et texte -->
         <section class="py-5">
             <div class="container">
                 <div class="row align-items-center">
 
                     <!-- Caroussel -->
                     <div class="col-lg-6">
-                        <!-- 
-      Rôle : Conteneur principal du carrousel.
-      Pourquoi :
-      - id="carouselAmbiance": Un nom unique est essentiel pour que les boutons sachent quel carrousel contrôler.
-      - class="carousel slide": Active le composant carrousel de Bootstrap avec une animation de glissement.
-      - data-bs-ride="carousel": C'est l'attribut qui DÉCLENCHE LE DÉFILEMENT AUTOMATIQUE au chargement de la page.
-    -->
                         <div id="carouselAmbiance" class="carousel slide " data-bs-interval="2000" data-bs-ride="carousel">
 
-                            <!-- 
-          Rôle : Conteneur pour toutes les diapositives.
-          Pourquoi : C'est la "pellicule" qui va défiler à l'intérieur du carrousel.
-        -->
                             <div class="carousel-inner">
 
-                                <!-- 
-              Rôle : Première diapositive.
-              Pourquoi :
-              - class="carousel-item": Définit cet élément comme une diapositive.
-              - class="active": Indique que c'est la première diapositive à s'afficher. Il ne doit y en avoir qu'une seule au départ.
-            -->
                                 <div class="carousel-item active">
-                                    <!-- 
-                  Rôle : L'image de la diapositive.
-                  Pourquoi :
-                  - class="d-block w-100": Classes Bootstrap. "d-block" évite les espacements indésirables et "w-100" assure que l'image prend toute la largeur de son conteneur.
-                  - class="carousel-image-fixed-height": C'est NOTRE classe CSS personnalisée pour forcer la hauteur et éviter la déformation.
-                -->
-                                    <img src="../restaurant/images/img_1_section2_1.jpg"
-                                        class="d-block w-100 carousel-image-fixed-height"
-                                        alt="Ambiance élégante du restaurant">
+                                    <img src="../restaurant/images/img_1_section2_1.jpg"class="d-block w-100 img-caroussel" alt="Ambiance élégante du restaurant">
                                 </div>
 
-                                <!-- 
-              Rôle : Deuxième diapositive.
-              Pourquoi : Structure identique à la première, sans la classe "active".
-            -->
                                 <div class="carousel-item">
-                                    <img src="../restaurant/images/img_1_section2_2.jpg"
-                                        class="d-block w-100 carousel-image-fixed-height" alt="Détail de la décoration">
+                                    <img src="../restaurant/images/img_1_section2_2.jpg" class="d-block w-100 img-caroussel" alt="Détail de la décoration">
                                 </div>
 
-                                <!-- 
-              Rôle : Troisième diapositive.
-              Pourquoi : Structure identique.
-            -->
                                 <div class="carousel-item">
-                                    <img src="../restaurant/images/img_1_section2_3.jpg"
-                                        class="d-block w-100 carousel-image-fixed-height" alt="Vue de la terrasse">
+                                    <img src="../restaurant/images/img_1_section2_3.jpg" class="d-block w-100 img-caroussel" alt="Vue de la terrasse">
                                 </div>
                             </div>
 
-                            <!-- 
-          Rôle : Bouton pour défiler vers la gauche (précédent).
-          Pourquoi :
-          - class="carousel-control-prev": Applique le style Bootstrap pour le bouton de gauche.
-          - data-bs-target="#carouselAmbiance": Relie ce bouton à notre carrousel via son ID.
-          - data-bs-slide="prev": Indique au JavaScript de Bootstrap de passer à la diapositive précédente.
-        -->
+                            <!-- bouton pour défiler vers la gauche (précédent). -->
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmbiance"
                                 data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
 
-                            <!-- 
-          Rôle : Bouton pour défiler vers la droite (suivant).
-          Pourquoi : Mêmes principes que le bouton précédent, mais pour la diapositive suivante.
-        -->
+                            <!-- bouton pour défiler vers la droite (suivant) -->
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselAmbiance"
                                 data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -163,7 +118,7 @@
                         </div>
                     </div>
 
-                    <!-- Colonne du texte -->
+                    <!-- textes -->
                     <div class="col-lg-6 ps-lg-5 mt-4 mt-lg-0">
                         <h2 class="titre-secondaire">Le Nouveau Coeur Battant du Plateau</h2>
                         <p class="mt-3">
@@ -181,7 +136,7 @@
             </div>
         </section>
         
-        <!-- SECTION DES CARTES DE MENU -->
+        <!-- cartes menu -->
         <section class="py-5">
             <div class="container">
 
@@ -195,7 +150,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card shadow-sm h-100 border-0">
                             
-                            <img src="../restaurant/images/img_1_section3_1.jpg" class="card-img-top image-carte-carree" alt="Le Dôme Gourmand">
+                            <img src="../restaurant/images/img_1_section3_1.jpg" class="card-img-top img-restaurant" alt="Le Dôme Gourmand">
                             <!-- Le corps de la carte -->
                             <div class="card-body text-center">
                                 <h3 class="card-title">Le Dôme Gourmand</h3>
@@ -209,7 +164,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card shadow-sm h-100 border-0">
 
-                            <img src="../restaurant/images/img_1_section3_2.jpeg" class="card-img-top image-carte-carree" alt="La Salade Toscana">
+                            <img src="../restaurant/images/img_1_section3_2.jpeg" class="card-img-top img-restaurant" alt="La Salade Toscana">
                             <!-- Le corps de la carte -->
                             <div class="card-body text-center">
                                 <h3 class="card-title">La Salade Toscana</h3>
@@ -223,7 +178,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card shadow-sm h-100 border-0">
 
-                            <img src="../restaurant/images/img_1_section3_3.jpg" class="card-img-top image-carte-carree" alt="Grillade Mixte à l'Ivoirienne">
+                            <img src="../restaurant/images/img_1_section3_3.jpg" class="card-img-top img-restaurant" alt="Grillade Mixte à l'Ivoirienne">
                             <!-- Le corps de la carte -->
                             <div class="card-body text-center">
                                 <h3 class="card-title">Grillade Mixte</h3>
@@ -237,12 +192,14 @@
             </div>
         </section>
 
+        <!--  appel a l action -->
         <section>
-            <div class="text-center mt-4">
+            <div class="text-center py-5 my-5">
                 <a class="btn btn-principale-resto" href="menu.html">Voir le menu</a>
             </div>
-            <hr class="separateur">
         </section>
+        <!-- Ligne de séparation -->
+        <hr class="separateur">
 
     </main>
 
